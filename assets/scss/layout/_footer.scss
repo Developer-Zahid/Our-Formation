@@ -7,6 +7,8 @@
         padding-bottom: toRem(30);
     }
     &__block{
+        margin-bottom: toRem(30);
+
         &__title{
             font-size: toRem(15);
             font-weight: 700;
@@ -14,17 +16,20 @@
             text-transform: uppercase;
             margin-bottom: toRem(35);
         }
+
         &__address{
             &__admin{
                 font-size: toRem(18);
                 font-weight: 600;
             }
+
             &__list{
                 line-height: 2.5;
                 &__item{
                     font-size: toRem(12);
                 }
             }
+
             &__link{
                 display: block;
                 font-size: toRem(14);
@@ -44,16 +49,43 @@
                 }
             }
         }
+
+        &__list{
+            &__item{
+                border-bottom: 1px solid darken($color-gray--dark, $amount: 2.5);
+                &__link{
+                    display: flex;
+                    align-items: center;
+                    font-size: toRem(14);
+                    padding: toRem(14) 0;
+                    @extend %transition;
+                    
+                    &__icon{
+                        font-size: toRem(12);
+                        margin-right: toRem(10);
+                    }
+
+                    &:focus,
+                    &:hover
+                    {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
     }
+
     &__bottom{
         background-color: $color-ass;
         padding-top: toRem(32);
         padding-bottom: toRem(32);
     }
+
     &__copyright{
         color: $color-white;
         font-size: toRem(15);
         margin-bottom: 0;
+
         &__link{
             text-decoration: underline;
             @extend %transition;
