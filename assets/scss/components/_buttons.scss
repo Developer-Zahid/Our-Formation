@@ -1,0 +1,61 @@
+/* Common Button's Style */
+.primary-btn{
+	display: inline-block;
+	color: $color-white;
+	font-size: toRem(16);
+	font-family: $font-primary;
+	font-weight: 400;
+	padding: toEm(18) toEm(10);
+	background-color: $color-primary;
+	border: 0;
+	border-radius: toRem(10);
+	line-height: 1;
+	@extend %transition;
+	&:active{
+		color: $color-white;
+		background-color: $color-secondary;
+	}
+	&:focus{
+		color: $color-white;
+	}
+	@include hover{
+		&:hover,
+		&:focus-visible{
+			color: $color-white;
+			background-color: $color-secondary;
+		}
+	}
+}
+
+.scroll-top{
+	bottom: 3%;
+	right: 15px;
+	display: none;
+	cursor: pointer;
+	z-index: 7;
+	@include mobile{
+		bottom: 15px;
+	}
+	&__btn{
+		width: toRem(30);
+		height: toRem(30);
+		font-size: toRem(16);
+		color: $color-white;
+		background: $color-primary;
+		@extend %transition;
+		&:active{
+			color: $color-white;
+			background-color: $color-secondary;
+		}
+		&:focus{
+			color: $color-white;
+		}
+		@include hover{
+			&:hover,
+			&:focus-visible{
+				color: $color-white;
+				background-color: $color-secondary;
+			}
+		}
+	}
+}

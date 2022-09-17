@@ -1,0 +1,217 @@
+/* Header Section Style */
+.header{
+	position: absolute;
+	top: 0;
+	z-index: 9;
+	background-color: $color-white;
+	transition: transform .2s ease;
+	.navbar{
+		&-brand{
+			&__image{
+				max-height: toRem(90);
+			}
+		}
+		&-toggler{
+			font-size: toEm(50);
+			color: $color-secondary;
+			z-index: 8;
+			@extend %transition;
+			&[aria-expanded="true"]{
+				color: $color-primary;
+			}
+			@include hover{
+				&:hover{
+					color: $color-primary;
+				}	
+			}
+		}
+		&-collapse{
+			@include desktop{
+				position: fixed;
+				top: 0;
+				right: 0;
+				transform: translateX(100%);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 50%;
+				height: 100vh;
+				background-color: darken($color-white, $amount: 3);
+				transition: transform ease-in-out .3s;
+				&.show{
+					transform: translateX(0);
+				}
+				.navbar-nav{
+					width: 100%;
+					margin-top: toRem(20);
+					.nav-item{
+						margin: 0.3rem 0.6rem;
+					}
+				}
+			}
+			@include tablet{
+				width: 100%;
+			}
+		}
+		.nav{
+			&-item{
+				.dropdown{
+					&-toggle{
+						@include min-desktop{
+							&::after{
+								display: none;
+							}
+						}
+					}
+					&-menu{
+						background-color: darken($color-white, $amount: 4);
+						padding: toRem(8);
+						border: 0;
+						border-radius: 0;
+						@extend %transition;
+						@include min-desktop{
+							display: block;
+							transform: translateY(40%);
+							opacity: 0;
+							visibility: hidden;
+							box-shadow: unset;
+						}
+					}
+					&-item{
+						font-size: toRem(14);
+						color: $color-gray;
+						padding: toEm(8) toEm(20);
+						@extend %transition;
+						&.active,
+						&:active,
+						&:hover,
+						&:focus{
+							color: $color-primary;
+							background-color: rgba($color-black, $alpha: 0.10);
+						}
+					}
+				}
+				&.dropdown{
+					@include min-desktop{
+						&::before{
+							content: "";
+							position: absolute;
+							left: 0;
+							bottom: 0;
+							transform: translateY(100%);
+							width: 100%;
+							height: 100%;
+							cursor: pointer;
+							pointer-events: none;
+						}
+						&:hover,
+						&:focus-within,
+						&:focus{
+							&::before{
+								pointer-events: all;
+							}
+							.dropdown-menu{
+								transform: translateY(0);
+								opacity: 1;
+								visibility: visible;
+							}
+						}
+					}
+					&:hover,
+					&:focus{
+						.nav-link{
+							color: unset;
+						}
+					}
+				}
+			}
+			&-link{
+				color: $color-black;
+				font-size: toRem(14);
+				font-weight: 700;
+				letter-spacing: 3px;
+				font-family: $font-primary;
+				padding-left: toRem(30);
+				padding-right: toRem(30);
+				text-transform: uppercase;
+				@extend %transition;
+				&:focus-visible{
+					color: $color-primary;
+				}
+				&:focus ~ .dropdown-menu{
+					@include min-desktop{
+						transform: translateY(0);
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+	&--fixed{
+		position: fixed;
+		transform: translateY(-100%);
+		box-shadow: 0px 1px 2px rgba($color-black, $alpha: 0.10);
+		animation: header_in .4s linear forwards;
+	}
+}
+
+.indicator-nav{
+	position: relative;
+	&__line{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 3px;
+		border-radius: 3px;
+		// background-color: $color-primary;
+		transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+		pointer-events: none;
+		user-select: none;
+		overflow: hidden;
+		&::before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 20%;
+			height: 100%;
+			background-color: $color-primary;
+			border-radius: inherit;
+		}
+	}
+}
+
+/* Fixed Header animation */
+@keyframes header_in{
+	0%{
+		transform: translateY(-100%);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+
+/* Off Canvas Navbar Toggler */
+.offCanvasMenuCloser{
+	top: 0;
+	left: 0;
+	transform: translateX(100%);
+	width: 100%;
+	height: 100%;
+	background: rgba($color: #000000, $alpha: 0.5);
+	z-index: 8;
+	opacity: 0;
+	transition: opacity .4s ease .4s;
+	display: none;
+	&.show{
+		transform: translateX(0);
+		opacity: 1;
+	}
+	@include tablet-to-desktop-lg{
+		display: block;
+	}
+}

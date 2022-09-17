@@ -1,0 +1,66 @@
+/* Footer Section Style */
+.footer{
+    color: $color-white;
+    background-color: darken($color-gray--dark, $amount: 8.5);
+    &__top{
+        padding-top: toRem(60);
+        padding-bottom: toRem(30);
+    }
+    &__block{
+        &__title{
+            font-size: toRem(15);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: toRem(35);
+        }
+        &__address{
+            &__admin{
+                font-size: toRem(18);
+                font-weight: 600;
+            }
+            &__list{
+                line-height: 2.5;
+                &__item{
+                    font-size: toRem(12);
+                }
+            }
+            &__link{
+                display: block;
+                font-size: toRem(14);
+                font-weight: 500;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                @extend %transition;
+
+                &__icon{
+                    margin-right: toRem(5);
+                }
+
+                &:focus-visible,
+                &:hover
+                {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+    &__bottom{
+        background-color: $color-ass;
+        padding-top: toRem(32);
+        padding-bottom: toRem(32);
+    }
+    &__copyright{
+        color: $color-white;
+        font-size: toRem(15);
+        margin-bottom: 0;
+        &__link{
+            text-decoration: underline;
+            @extend %transition;
+            &:hover,
+            &:focus{
+                color: $color-primary;
+            }
+        }
+    }
+}

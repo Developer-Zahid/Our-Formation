@@ -1,0 +1,105 @@
+/* Banner Section Style */
+.banner{
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include desktop-xl{
+        padding-bottom: toRem(50);
+    }
+    @include min-tablet{
+        padding-top: toRem(80);
+    }
+    @include min-desktop-xl{
+        padding-top: toRem(100);
+    }
+
+    &__title{
+        font-size: toEm(28);
+        font-weight: 700;
+        line-height: 1.6;
+        @include min-tablet{
+            font-size: toEm(32);
+        }
+        @include min-desktop{
+            font-size: toEm(42);
+        }
+    }
+
+    .primary-btn{
+        margin-top: toRem(20);
+        margin-bottom: toRem(40);
+    }
+
+    &__btn{
+        display: inline-flex;
+        align-items: flex-end;
+        line-height: 1;
+        font-weight: 500;
+        text-decoration: underline;
+        &__image{
+            max-width: 100%;
+            max-height: toRem(28);
+            margin-right: 4px;
+        }
+        &__icon{
+            color: $color-primary;
+            margin-left: 4px;
+        }
+    }
+
+    &-footer{
+        margin-top: toRem(110);
+
+        .container{
+            @include min-desktop-xl{
+                max-width: calc(100% - 100px);
+            }
+        }
+
+        &__block{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: toRem(30) toRem(15);
+            background-color: $color-white;
+            border: 1px solid $color-gray;
+            border-radius: toRem(9);
+            margin-bottom: toRem(30);
+
+            &__text{
+                font-size: toEm(18);
+                font-weight: 500;
+                line-height: 1.4;
+                margin-bottom: toRem(30);
+            }
+
+            &__btn{
+                margin-top: auto;
+                display: inline-flex;
+                align-items: center;
+                color: $color-primary;
+                font-size: toRem(15);
+                font-weight: 600;
+                @extend %transition;
+                
+                &__text{
+                    padding-right: toRem(5);
+                }
+                &__icon{
+                    font-size: toRem(12);
+                    @extend %transition;
+                }
+
+                &:hover,
+                &:focus
+                {
+                    color: $color-secondary;
+
+                    .banner-footer__block__btn__icon{
+                        padding-left: toRem(5);
+                    }
+                }
+            }
+        }
+    }
+}
