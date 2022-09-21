@@ -69,10 +69,88 @@ img{
 	}
 }
 
+/* Scale Animation Style */
+.scale-animation{
+	transform: scale(1);
+	@include hover{
+		animation: pop-out-in 200ms $scale-animation-easing forwards;
+	}
+}
+
+.scale-animation--trigger{
+
+	&:active{
+		.scale-animation{
+			animation: pop-in-out 200ms $scale-animation-easing forwards;
+		}
+	}
+
+	@include hover{
+		&:hover,
+		&:focus-visible
+		{
+			.scale-animation{
+				animation: pop-in-out 200ms $scale-animation-easing forwards;
+			}
+		}
+	}
+}
+
+@keyframes pop-out-in {
+	0%, 100%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(0);
+	}
+}
+
+@keyframes pop-in-out {
+	0%, 100%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(0);
+	}
+}
+
+/* Custom List Style */
+.custom-list{
+	&__item{
+		display: flex;
+
+		&:not(:last-child){
+			margin-bottom: toRem(35);
+		}
+
+		@extend .scale-animation--trigger;
+
+		&__marker{
+			flex-shrink: 0;
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: $color-secondary;
+			margin-top: toRem(5);
+			margin-right: toRem(15);
+
+			@extend .scale-animation;
+		}
+
+		&__text{
+			font-size: toRem(14);
+			@include min-tablet{
+				font-size: toRem(16);
+			}
+		}
+	}
+}
+
 /* Custom Container Style */
 .container{
 	@include min-desktop-xl{
-		max-width: 1320px;
+		max-width: 1310px;
 	}
 }
 
@@ -139,15 +217,9 @@ img{
 
 /* Common Section Gap Style */
 .section-gap{
-	padding: 6rem 0;
-	@include desktop{
-		padding: 3rem 0;
-	}
+	padding: toRem(50) 0;
 	&--fix{
-		padding-bottom: calc(6rem - 30px);
-		@include desktop{
-			padding-bottom: calc(3rem - 30px);
-		}
+		padding-bottom: calc(toRem(50) - 30px);
 	}
 }
 
@@ -159,12 +231,13 @@ img{
 	}
 	&__title{
 		font-size: toRem(40);
-		font-family: unset;
+		font-weight: 800;
+		font-family: $font-primary;
 		@include tablet{
-			font-size: toRem(30);
+			font-size: toRem(25);
 		}
-		@include mobile{
-			font-size: toRem(26);
+		@include desktop{
+			text-align: center;
 		}
 	}
 }
@@ -177,3 +250,27 @@ img{
 .match-height [class*="col"] > *{
 	flex-grow: 1;
 }
+
+.info-slide{
+	margin-bottom: toRem(30);
+	&__card{
+		font-size: toRem(17);
+		font-weight: 400;
+		line-height: toRem(30);
+		padding: 20px 15px;
+		background-color: #f4f9f9;
+		border: 1px solid $color-black;
+		border-radius: toRem(10);
+
+		&__title{
+			font-size: inherit;
+			font-weight: inherit;
+		}
+	}
+}
+
+
+
+// .section{
+// 	&__image
+// }

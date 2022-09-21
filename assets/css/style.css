@@ -1,5 +1,5 @@
 /* CSS Variable's */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 :root {
   --color-primary: #ff2437;
@@ -102,10 +102,176 @@ img {
   font-size: 1rem;
 }
 
+/* Scale Animation Style */
+.scale-animation, .custom-list__item__marker {
+  -webkit-transform: scale(1);
+     -moz-transform: scale(1);
+      -ms-transform: scale(1);
+       -o-transform: scale(1);
+          transform: scale(1);
+}
+
+@media (hover: hover) {
+  .scale-animation, .custom-list__item__marker {
+    -webkit-animation: pop-out-in 200ms ease-in-out forwards;
+       -moz-animation: pop-out-in 200ms ease-in-out forwards;
+         -o-animation: pop-out-in 200ms ease-in-out forwards;
+            animation: pop-out-in 200ms ease-in-out forwards;
+  }
+}
+
+.scale-animation--trigger:active .scale-animation, .custom-list__item:active .scale-animation, .scale-animation--trigger:active .custom-list__item__marker, .custom-list__item:active .custom-list__item__marker {
+  -webkit-animation: pop-in-out 200ms ease-in-out forwards;
+     -moz-animation: pop-in-out 200ms ease-in-out forwards;
+       -o-animation: pop-in-out 200ms ease-in-out forwards;
+          animation: pop-in-out 200ms ease-in-out forwards;
+}
+
+@media (hover: hover) {
+  .scale-animation--trigger:hover .scale-animation, .custom-list__item:hover .scale-animation, .scale-animation--trigger:hover .custom-list__item__marker, .custom-list__item:hover .custom-list__item__marker, .scale-animation--trigger:focus-visible .scale-animation, .custom-list__item:focus-visible .scale-animation, .scale-animation--trigger:focus-visible .custom-list__item__marker, .custom-list__item:focus-visible .custom-list__item__marker {
+    -webkit-animation: pop-in-out 200ms ease-in-out forwards;
+       -moz-animation: pop-in-out 200ms ease-in-out forwards;
+         -o-animation: pop-in-out 200ms ease-in-out forwards;
+            animation: pop-in-out 200ms ease-in-out forwards;
+  }
+}
+
+@-webkit-keyframes pop-out-in {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-moz-keyframes pop-out-in {
+  0%, 100% {
+    -moz-transform: scale(1);
+         transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(0);
+         transform: scale(0);
+  }
+}
+
+@-o-keyframes pop-out-in {
+  0%, 100% {
+    -o-transform: scale(1);
+       transform: scale(1);
+  }
+  50% {
+    -o-transform: scale(0);
+       transform: scale(0);
+  }
+}
+
+@keyframes pop-out-in {
+  0%, 100% {
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+         -o-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes pop-in-out {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-moz-keyframes pop-in-out {
+  0%, 100% {
+    -moz-transform: scale(1);
+         transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(0);
+         transform: scale(0);
+  }
+}
+
+@-o-keyframes pop-in-out {
+  0%, 100% {
+    -o-transform: scale(1);
+       transform: scale(1);
+  }
+  50% {
+    -o-transform: scale(0);
+       transform: scale(0);
+  }
+}
+
+@keyframes pop-in-out {
+  0%, 100% {
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+         -o-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+/* Custom List Style */
+.custom-list__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.custom-list__item:not(:last-child) {
+  margin-bottom: 2.1875rem;
+}
+
+.custom-list__item__marker {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  margin-top: 0.3125rem;
+  margin-right: 0.9375rem;
+}
+
+.custom-list__item__text {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .custom-list__item__text {
+    font-size: 1rem;
+  }
+}
+
 /* Custom Container Style */
 @media (min-width: 1400px) {
   .container {
-    max-width: 1320px;
+    max-width: 1310px;
   }
 }
 
@@ -178,25 +344,12 @@ img {
 
 /* Common Section Gap Style */
 .section-gap {
-  padding: 6rem 0;
-}
-
-@media (max-width: 991.98px) {
-  .section-gap {
-    padding: 3rem 0;
-  }
+  padding: 3.125rem 0;
 }
 
 .section-gap--fix {
-  padding-bottom: -moz-calc(6rem - 30px);
-  padding-bottom: calc(6rem - 30px);
-}
-
-@media (max-width: 991.98px) {
-  .section-gap--fix {
-    padding-bottom: -moz-calc(3rem - 30px);
-    padding-bottom: calc(3rem - 30px);
-  }
+  padding-bottom: -moz-calc(toRem(50) - 30px);
+  padding-bottom: calc(toRem(50) - 30px);
 }
 
 /* Common Section Heading Style */
@@ -212,18 +365,19 @@ img {
 
 .section-header__title {
   font-size: 2.5rem;
-  font-family: unset;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 767.98px) {
   .section-header__title {
-    font-size: 1.875rem;
+    font-size: 1.5625rem;
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .section-header__title {
-    font-size: 1.625rem;
+    text-align: center;
   }
 }
 
@@ -242,6 +396,25 @@ img {
      -moz-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.info-slide {
+  margin-bottom: 1.875rem;
+}
+
+.info-slide__card {
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+  padding: 20px 15px;
+  background-color: #f4f9f9;
+  border: 1px solid #000000;
+  border-radius: 0.625rem;
+}
+
+.info-slide__card__title {
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 /* Common Transition Style */
