@@ -13,14 +13,14 @@
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://ourformationfrance.fr/">
+	<meta property="og:url" content="https://ourformation.netlify.app/">
 	<meta property="og:title" content="Ourformation">
 	<meta property="og:description" content="Nous avons de nombreuses formations professionnelles éligibles au CPF. Toutes ces formations sont 100% à distance. Contactez-nous pour en bénéficier !">
 	<meta property="og:image" content="./assets/images/courses/course-word.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://ourformationfrance.fr/">
+	<meta property="twitter:url" content="https://ourformation.netlify.app/">
 	<meta property="twitter:title" content="Ourformation">
 	<meta property="twitter:description" content="Nous avons de nombreuses formations professionnelles éligibles au CPF. Toutes ces formations sont 100% à distance. Contactez-nous pour en bénéficier !">
 	<meta property="twitter:image" content="./assets/images/courses/course-word.png">
@@ -35,6 +35,7 @@
 
 	<!-- All CSS -->
 	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/slick-slider/css/slick.css">
 	<link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body>
@@ -53,10 +54,10 @@
 					<ul class="navbar-nav indicator-nav text-center ml-auto">
 						<div class="indicator-nav__line"></div>
 						<li class="nav-item indicator-nav__item">
-							<a class="nav-link indicator-nav__link active" href="#!">Accueil</a>
+							<a class="nav-link indicator-nav__link active" href="./">Accueil</a>
 						</li>
 						<li class="nav-item indicator-nav__item">
-							<a class="nav-link indicator-nav__link" href="#!">Formations</a>
+							<a class="nav-link indicator-nav__link" href="./formations.html">Formations</a>
 						</li>
 						<li class="nav-item indicator-nav__item">
 							<a class="nav-link indicator-nav__link" href="#!">CPF</a>
@@ -72,7 +73,7 @@
 							</div>
 						</li>
 						<li class="nav-item indicator-nav__item">
-							<a class="nav-link indicator-nav__link" href="#!">Blog</a>
+							<a class="nav-link indicator-nav__link" href="./blogs.html">Blog</a>
 						</li>
 						<li class="nav-item indicator-nav__item">
 							<a class="nav-link indicator-nav__link" href="#!">Contact</a>
@@ -186,7 +187,6 @@
 		</div>
 	</section>
 
-	<!-- INFORMATIONS PRATIQUES Section -->
 	<section class="section section-gap">
 		<div class="container">
 			<div class="row">
@@ -240,6 +240,117 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="figures section-gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 text-center">
+					<div class="section-header">
+						<h1 class="section-header__title">MY FORMATION FRANCE EN CHIFFRE</h1>
+					</div>
+					<h2 class="figures__title">À la date du 1er Novembre pour l'année 2021</h2>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="figures__card">
+						<img src="./assets/images/icons/badge.png" alt="figures image" class="figures__card__image">
+						<h3 class="figures__card__title">2934</h3>
+						<p class="figures__card__text">Nombre d’inscrits</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="figures__card">
+						<img src="./assets/images/icons/chart.png" alt="figures image" class="figures__card__image">
+						<h3 class="figures__card__title">100%</h3>
+						<p class="figures__card__text">Taux de réussite</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="figures__card">
+						<img src="./assets/images/icons/student.png" alt="figures image" class="figures__card__image">
+						<h3 class="figures__card__title">457</h3>
+						<p class="figures__card__text">Nombre de certifiés</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section-gap">
+		<div class="container">
+			<div class="row align-items-center flex-lg-row-reverse">
+				<div class="col-lg-6 text-center text-lg-left">
+					<img src="./assets/images/sections/CPF.png" alt="section image" class="section__image img-fluid">
+				</div>
+				<div class="col-lg-6 pt-5">
+					<h1 class="section__title">QU'EST-CE QU'UN CPF ?</h1>
+					<p class="section__text">Le compte personnel de formation est utilisable par tout salarié, à tout moment de sa vie active, y compris en période de chômage afin de suivre une formation qualifiante ou certifiante, prise en charge par l’état. Le CPF a remplacé le droit individuel à la formation. Les salariés doivent faire la migration au CPF avant le 1er juillet 2021 pour conserver leur crédit au Crédit Individuel à la Formation (DIF).</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section-gap" style="background-image: url(./assets/images/shapes/rounded-corder-shape.png);">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6 text-center text-lg-left">
+					<img src="./assets/images/sections/SAVOIR.png" alt="section image" class="section__image img-fluid">
+				</div>
+				<div class="col-lg-6 pt-5">
+					<h1 class="section__title">QUE DEVRIEZ-VOUS SAVOIR ?</h1>
+					<p class="section__text">Le compte personnel de formation est un moyen pour sécuriser vos cursus de formations professionnels. Détenir un CPF, c’est permettre à son détendeur, quel que soit son statut, salarié ou demandeur d’emploi, de suivre, à son initiative, une action de formation à distance. Le Compte Personnel de Formation est le nouveau droit à la formation professionnelle qui remplace le Compte Individuel de Formation DIF et ce depuis le 1er janvier 2015. Ce compte est accessible à un large public, particulièrement aux salariés et aux demandeurs d’emploi aussi aux auto-entrepreneurs. À partir de 16 ans,15 ans pour les apprentis, et jusqu’ à la retraite, des heures de formation peuvent être cumulées et comptabiliser sur votre Compte de formation. En effet, Chaque année votre compte est alimenté en un nombre d’heure préétabli, dans la limite de 150 heures de formation professionnelle, et ce sur 8 ans, même à la retraite tant que le compte est approvisionné.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section-gap">
+		<div class="container">
+			<div class="row align-items-center flex-lg-row-reverse">
+				<div class="col-lg-6 text-center text-lg-left">
+					<img src="./assets/images/sections/FORMATIONS.png" alt="section image" class="section__image img-fluid">
+				</div>
+				<div class="col-lg-6 pt-5">
+					<h1 class="section__title">QUELLES SONT LES FORMATIONS ÉLIGIBLES AU CPF ?</h1>
+					<p class="section__text">Seuls les formations conduisant à une qualification, une certification, l’acquisition d’un socle de connaissances et de compétences par décret ou actions d’accompagnements à la validation des acquis de l’expérience (VAE).</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="certification section section-gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<div class="section-header text-center">
+						<h1 class="section-header__title">NOS CERTIFICATIONS</h1>
+					</div>
+				</div>
+				<div class="col-lg-5">
+					<div class="certification__card">
+						<h3 class="certification__card__title">TOIEC</h3>
+						<p class="certification__card__text">The Test of English for International Communication, sert à évaluer le niveau des candidats et à déterminer leur capacité à employer l’anglais pour un usage professionnel. Le TOIEC permet de mesurer leur compréhension et leur expression en anglais.</p>
+						<div class="text-center">
+							<img src="./assets/images/companies/TOEIC.png" alt="certification iamge" class="certification__card__image">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="section-header text-center">
+						<h1 class="section-header__title"><i class="bi bi-chat-dots mr-1"></i>TÉMOIGNAGES</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section-gap"></section>
 
 	<!-- Footer Section -->
 	<footer class="footer">
@@ -398,7 +509,7 @@
 
 	<!-- Scroll To Top Button -->
 	<div class="scroll-top position-fixed">
-		<button class="scroll-top__btn border-0 d-inline-flex align-items-center justify-content-center">
+		<button type="button" class="scroll-top__btn border-0 d-inline-flex align-items-center justify-content-center">
 			<i class="bi bi-chevron-up"></i>
 		</button>
 	</div>
@@ -406,6 +517,7 @@
 	<!-- All Scripts -->
 	<script src="./assets/js/jquery-1.12.4.min.js"></script>
 	<script src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/plugins/slick-slider/js/slick.js"></script>
 	<script src="./assets/js/script.js"></script>
 </body>
 </html>

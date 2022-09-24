@@ -6,6 +6,8 @@
 	background-color: $color-white;
 	transition: transform .2s ease;
 	.navbar{
+		padding-top: 0;
+		padding-bottom: 0;
 		&-brand{
 			&__image{
 				max-height: toRem(90);
@@ -148,40 +150,17 @@
 				}
 			}
 		}
+		.indicator-nav__line::before{
+			left: 50%;
+			transform: translateX(-50%);
+			width: 20%;
+		}
 	}
 	&--fixed{
 		position: fixed;
 		transform: translateY(-100%);
 		box-shadow: 0px 1px 2px rgba($color-black, $alpha: 0.10);
 		animation: header_in .4s linear forwards;
-	}
-}
-
-.indicator-nav{
-	position: relative;
-	&__line{
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 0;
-		height: 3px;
-		border-radius: 3px;
-		// background-color: $color-primary;
-		transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-		pointer-events: none;
-		user-select: none;
-		overflow: hidden;
-		&::before{
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 20%;
-			height: 100%;
-			background-color: $color-primary;
-			border-radius: inherit;
-		}
 	}
 }
 

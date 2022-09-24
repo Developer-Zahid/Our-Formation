@@ -6,6 +6,7 @@
         // preLoader();
 		headerHeightFixer();
 		activeIndicatorInit();
+		isotopeInit();
     });
 
 	/* Preloader init */
@@ -92,29 +93,59 @@
 	}
 
     /*  Banner slider */
-    $(".info-slider").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        speed: 500,
-        arrows: true,
-        prevArrow: '<button class="slick__arrows slick__arrows--left border-0 d-inline-flex align-items-center justify-content-center position-absolute"><i class="fas fa-chevron-left"></i></button>',
-		nextArrow: '<button class="slick__arrows slick__arrows--right border-0 d-inline-flex align-items-center justify-content-center position-absolute"><i class="fas fa-chevron-right"></i></button>',
-        dots: false,
-        pauseOnHover: false,
-        pauseOnFocus: false,
-        infinite: true,
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					arrows: false,
-					dots: true
+	if($(".info-slider").length){
+		$(".info-slider").slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			speed: 500,
+			arrows: true,
+			prevArrow: '<button class="slick__arrows slick__arrows--left border-0 d-inline-flex align-items-center justify-content-center position-absolute"><i class="bi bi-chevron-left"></i></button>',
+			nextArrow: '<button class="slick__arrows slick__arrows--right border-0 d-inline-flex align-items-center justify-content-center position-absolute"><i class="bi bi-chevron-right"></i></button>',
+			dots: false,
+			pauseOnHover: false,
+			pauseOnFocus: false,
+			infinite: true,
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 1,
+						arrows: false,
+						dots: true
+					}
+				},
+			]
+		});
+	}
+	
+	/* Isotope Init */
+	function isotopeInit() {
+		if($(".training-list").length){
+			$(".training-list").isotope({
+				itemSelector: ".training-list__item",
+				layoutMode: "fitRows",
+				masonry: {
+					isFitWidth: true
 				}
-			},
-		]
-    });
+			});
+	
+			// filter items on button click
+			$(".filter-list__link").on("click", function () {
+				var filterValue = $(this).attr("data-filter");
+				$(".training-list").isotope({ filter: filterValue });
+	
+				// Toggle active class on button click
+				$(".filter-list__link").removeClass("active");
+				$(this).addClass("active");
+			});
+		}
+	}
 
 
     /*  Banner slider */

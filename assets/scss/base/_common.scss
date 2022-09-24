@@ -157,28 +157,15 @@ img{
 /* Common Slick Style */
 .slick{
 	&__arrows{
-		top: 0;
+		top: 50%;
 		position: absolute;
 		z-index: 3;
 		width: toRem(40);
 		height: toRem(40);
-		color: unset;
-		background-color: unset;
 		font-size: toRem(20);
 		text-align: center;
 		cursor: pointer;
 		@extend %transition;
-		&--left{
-			right: 0;
-		}
-		&--right{
-			right: 0;
-		}
-		&:hover,
-		&:focus-visible{
-			color: unset;
-			background-color: unset;
-		}
 	}
 	&-dots{
 		display: flex;
@@ -193,8 +180,8 @@ img{
 				font-size: 0;
 				width: toRem(8);
 				height: toRem(8);
-				background: $color-primary;
-				border: 1px solid $color-primary;
+				background: $color-secondary;
+				border: 1px solid $color-secondary;
 				border-radius: toRem(8);
 				@extend %transition;
 			}
@@ -251,26 +238,329 @@ img{
 	flex-grow: 1;
 }
 
-.info-slide{
-	margin-bottom: toRem(30);
-	&__card{
-		font-size: toRem(17);
-		font-weight: 400;
-		line-height: toRem(30);
-		padding: 20px 15px;
-		background-color: #f4f9f9;
-		border: 1px solid $color-black;
-		border-radius: toRem(10);
-
-		&__title{
-			font-size: inherit;
-			font-weight: inherit;
+/* Common Indicator Nav Style */
+.indicator-nav{
+	position: relative;
+	&__line{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 3px;
+		border-radius: 3px;
+		transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+		pointer-events: none;
+		user-select: none;
+		overflow: hidden;
+		&::before{
+			content: "";
+			position: absolute;
+			top: 0;
+			// left: 50%;
+			// transform: translateX(-50%);
+			// width: 20%;
+			height: 100%;
+			background-color: $color-primary;
+			border-radius: inherit;
 		}
 	}
 }
 
+/* Common Section Style */
+.section{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	&__title{
+		font-size: toRem(24);
+		font-weight: 700;
+		margin-bottom: toRem(40);
+		@include min-tablet{
+			font-size: toRem(30);
+		}
+	}
+	&__text{
+		font-size: toRem(15);
+		font-weight: 300;
+		line-height: 1.7;
+	}
+}
 
+/* INFORMATIONS Section Style */
+.info{
+	&-slider{
+		.slick__arrows{
+			color: $color-white;
+			background-color: rgba($color-black, $alpha: 0.5);
+			border-radius: 50%;
+			@include desktop-xl{
+				transform: translateY(-50%);
+			}
 
-// .section{
-// 	&__image
-// }
+			&--left{
+				left: 0;
+				@include min-desktop-xl{
+					transform: translate(-50%, -50%);
+				}
+			}
+			&--right{
+				right: 0;
+				@include min-desktop-xl{
+					transform: translate(50%, -50%);
+				}
+			}
+
+			&:hover,
+			&:focus-visible{
+				background-color: $color-black;
+			}
+		}
+	}
+	&-slide{
+		margin-bottom: toRem(30);
+		&__card{
+			font-size: toRem(17);
+			font-weight: 400;
+			line-height: toRem(30);
+			padding: 20px 15px;
+			background-color: #f4f9f9;
+			border: 1px solid $color-black;
+			border-radius: toRem(10);
+	
+			&__title{
+				font-size: inherit;
+				font-weight: inherit;
+			}
+		}
+	}
+}
+
+/* Figures Section Style */
+.figures{
+	background-color: #f3f9fe;
+
+	&__title{
+		font-size: toRem(18);
+		font-weight: 800;
+		margin-bottom: toRem(70);
+		
+		@include min-tablet{
+			font-size: toRem(25);
+		}
+	}
+
+	&__card{
+		text-align: center;
+		margin-bottom: toRem(30);
+
+		&__image{
+			max-width: 100%;
+			max-height: toRem(60);
+			margin-bottom: toRem(28);
+		}
+
+		&__title{
+			font-size: toRem(28);
+			font-weight: 700;
+			margin-bottom: toRem(20);
+		}
+
+		&__text{
+			font-size: toRem(20);
+			font-weight: 400;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.certification{
+	background-color: #f1f5f6;
+
+	&__card{
+		background-color: $color-white;
+		padding: toRem(30) toRem(15);
+		border: 1px solid #d1d1d1;
+		border-radius: 10px;
+		
+		@include min-tablet{
+			padding: toRem(50) toRem(40);
+		}
+
+		&__title{
+			color: $color-primary;
+			font-size: toRem(26);
+			font-weight: 700;
+			text-align: center;
+			margin-bottom: toRem(45);
+		}
+
+		&__text{
+			font-size: toRem(16);
+			line-height: 1.7;
+			font-weight: 300;
+			margin-bottom: 0;
+		}
+
+		&__image{
+			margin-top: toRem(50);
+			max-width: 100%;
+			max-height: toRem(90);
+		}
+	}
+}
+
+.sub-banner{
+	text-align: center;
+	padding-top: toRem(10);
+	padding-bottom: toRem(280);
+	background-position: center;
+	background-size: cover;
+	&__title{
+		font-size: toRem(28);
+		font-weight: 700;
+		
+		@include min-tablet{
+			font-size: toRem(40);
+		}
+
+		@include min-desktop{
+			font-size: toRem(55);
+		}
+	}
+}
+
+.filter-list{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	&__item{
+		margin-left: toRem(15);
+		margin-right: toRem(15);
+	}
+
+	&__link{
+		background-color: transparent;
+		border: 0;
+		padding: toRem(10) 2px;
+		text-transform: uppercase;
+		transition: color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+		@include min-mobile{
+			white-space: nowrap;
+		}
+
+		&.active,
+		&:active
+		{
+			color: $color-primary;
+		}
+
+		@include hover{
+			&:hover,
+			&:focus-visible
+			{
+				color: $color-primary;
+			}
+		}
+
+	}
+
+	.indicator-nav__line::before{
+		left: 0;
+		width: 100%;
+
+		@include tablet{
+			opacity: 0;
+		}
+	}
+}
+
+.training{
+	.filter-list{
+		margin-bottom: toRem(50);
+	}
+
+	&__card{
+		margin-bottom: toRem(40);
+
+		&__head{
+			position: relative;
+			display: block;
+			height: toRem(215);
+			overflow: hidden;
+
+			&__image,
+			&__overlay
+			{
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				transition: all linear .3s;
+			}
+
+			&__image{
+				object-fit: cover;
+			}
+
+			&__overlay{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-transform: uppercase;
+				color: $color-white;
+				font-size: toRem(13);
+				font-weight: 600;
+				letter-spacing: 2px;
+				background-color: rgba($color: #000000, $alpha: 0.4);
+				opacity: 0;
+			}
+
+			&:hover,
+			&:focus
+			{
+				.training__card__head{
+					&__image{
+						transform: scale(1.1);
+					}
+
+					&__overlay{
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		&__body{
+			padding-top: toRem(25);
+		}
+
+		&__title{
+			font-size: toRem(18);
+			font-weight: 600;
+			margin-bottom: toRem(17);
+			text-transform: uppercase;
+
+			&__link{
+				@extend %transition;
+
+				&:hover,
+				&:focus
+				{
+					color: $color-primary;
+				}
+			}
+		}
+
+		&__text{
+			color: $color-gray;
+			font-size: toRem(16);
+			line-height: 1.7;
+			margin-bottom: 0;
+		}
+	}
+}
