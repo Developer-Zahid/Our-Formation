@@ -564,3 +564,141 @@ img{
 		}
 	}
 }
+
+.blog-card{
+	&-wrapper{
+		> *:not(:last-child){
+			margin-bottom: toRem(70);
+		}
+	}
+
+
+	@include min-desktop{
+		display: flex;
+	}
+
+	&__header{
+		@include desktop{
+			margin-bottom: toRem(25);
+		}
+
+		&__link{
+			position: relative;
+			display: block;
+			width: 100%;
+			overflow: hidden;
+
+			&::after{
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: rgba($color-black, $alpha: 0.3);
+				opacity: 0;
+				@extend %transition;
+			}
+
+			&__image{
+				position: relative;
+				display: block;
+				width: 100%;
+				height: 100%;
+				max-height: toRem(300);
+				@extend %transition;
+			}
+
+			&:hover,
+			&:focus
+			{
+				&::after{
+					opacity: 1;
+				}
+				.blog-card__header__link__image{
+					transform: scale(1.1);
+				}
+			}
+		}
+
+		&__meta{
+			border-right: 1px solid lighten($color-gray, $amount: 50);
+			margin: 5px 0;
+			padding-right: toRem(20);
+			text-align: right;
+			display: block;
+
+			@include desktop{
+				display: none;
+			}
+
+			&__title{
+				color: darken($color-gray--dark, $amount: 3);
+				font-size: toRem(27);
+				font-weight: 700;
+				letter-spacing: 1px;
+			}
+
+			&__text{
+				color: $color-gray;
+				text-transform: uppercase;
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__body{
+		&__title{
+			font-size: toRem(25);
+			font-weight: 700;
+			margin-bottom: toRem(16);
+			
+			@include min-desktop-lg{
+				font-size: toRem(28);
+			}
+			
+			&__link{
+				display: block;
+				color: $color-gray--dark;
+				@extend %transition;
+
+				&:hover,
+				&:focus
+				{
+					color: $color-secondary;
+				}
+			}
+
+		}
+
+		&__meta{
+			display: inline-block;
+			font-size: toRem(12);
+			color: $color-secondary;
+			@extend %transition;
+
+			&__text{
+				font-weight: 700;
+				text-transform: uppercase;
+				margin-left: toRem(7);
+			}
+
+			&:hover,
+			&:focus
+			{
+				color: $color-primary;
+			}
+		}
+
+		&__text{
+			font-size: toRem(16);
+			color: $color-gray;
+			line-height: 1.7;
+			margin-top: toRem(20);
+			margin-bottom: toRem(20);
+
+			@include tablet{
+				font-size: toRem(14);
+			}
+		}
+	}
+}
