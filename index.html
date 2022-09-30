@@ -39,479 +39,537 @@
 	<link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body>
-	<!-- Header Section -->
-	<header class="header w-100">
-		<nav class="navbar navbar-expand-lg">
-			<div class="container">
-				<a class="navbar-brand" href="./">
-					<img src="./assets/images/logo/logo.png" alt="logo" class="navbar-brand__image">
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false">
-					<i class="bi bi-list"></i>
-				</button>
-			
-				<div class="collapse navbar-collapse" id="navbarCollapse">
-					<ul class="navbar-nav indicator-nav text-center ml-auto">
-						<div class="indicator-nav__line"></div>
-						<li class="nav-item indicator-nav__item">
-							<a class="nav-link indicator-nav__link active" href="./">Accueil</a>
-						</li>
-						<li class="nav-item indicator-nav__item">
-							<a class="nav-link indicator-nav__link" href="./formations.html">Formations</a>
-						</li>
-						<li class="nav-item indicator-nav__item">
-							<a class="nav-link indicator-nav__link" href="#!">CPF</a>
-						</li>
-						<li class="nav-item indicator-nav__item dropdown">
-							<a href="javascript:void(0)" role="button" class="nav-link indicator-nav__link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Vous êtes
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#!">Entreprises</a>
-								<a class="dropdown-item" href="#!">Indépendants</a>
-								<a class="dropdown-item" href="#!">Auto-entrepreneur</a>
-							</div>
-						</li>
-						<li class="nav-item indicator-nav__item">
-							<a class="nav-link indicator-nav__link" href="./blogs.html">Blog</a>
-						</li>
-						<li class="nav-item indicator-nav__item">
-							<a class="nav-link indicator-nav__link" href="#!">Contact</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-
-	<!-- Banner Section -->
-	<section class="banner" style="background-image: url(./assets/images/banners/home-banner.png);">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-6">
-					<h1 class="banner__title">
-						Profiter de votre droit <br>
-						à la formation <br>
-						et améliorer votre CV
-					</h1>
-					<a href="#!" class="primary-btn">Vérifier mon éligibilité</a>
-					<div>
-						<a href="#!" class="banner__btn">
-							<img src="./assets/images/icons/handicap-sign.png" alt="icon" class="banner__btn__image">
-							Accessibilité des personnes en situation de handicap
-							<svg class="banner__btn__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M13.7403 6.15817L12.8963 5.29116C12.5488 4.9343 11.9832 4.9343 11.6314 5.29116L8.48915 8.52353V0.917305C8.48915 0.411765 8.08606 0 7.59613 0H6.40473C5.91256 0 5.5117 0.407189 5.5117 0.917305V8.51892L2.36949 5.29116C2.02209 4.9343 1.45644 4.9343 1.10458 5.29116L0.260553 6.15817C-0.0868511 6.51503 -0.0868511 7.09608 0.260553 7.45752L6.36685 13.7301C6.54056 13.9085 6.76995 14 6.99707 14C7.22643 14 7.4536 13.9085 7.62731 13.7301L13.7336 7.45752C14.0877 7.09608 14.0877 6.51503 13.7403 6.15817Z" fill="currentColor"/>
-							</svg>
-						</a>
+	<main class="page-wrapper">
+		<!-- Header Section -->
+		<header class="header w-100">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<a class="navbar-brand" href="./">
+						<img src="./assets/images/logo/logo.png" alt="logo" class="navbar-brand__image">
+					</a>
+					<button class="navbar-toggler mobile-menu--open" type="button">
+						<span class="navbar-toggler__line"></span>
+					</button>
+				
+					<div class="collapse navbar-collapse" id="navbarCollapse">
+						<ul class="navbar-nav indicator-nav text-center ml-auto">
+							<div class="indicator-nav__line"></div>
+							<li class="nav-item indicator-nav__item">
+								<a class="nav-link indicator-nav__link active" href="./index.html">Accueil</a>
+							</li>
+							<li class="nav-item indicator-nav__item">
+								<a class="nav-link indicator-nav__link" href="./formations.html">Formations</a>
+							</li>
+							<li class="nav-item indicator-nav__item">
+								<a class="nav-link indicator-nav__link" href="./cpf.html">CPF</a>
+							</li>
+							<li class="nav-item indicator-nav__item dropdown">
+								<a href="javascript:void(0)" role="button" class="nav-link indicator-nav__link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Vous êtes
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#!">Entreprises</a>
+									<a class="dropdown-item" href="#!">Indépendants</a>
+									<a class="dropdown-item" href="#!">Auto-entrepreneur</a>
+								</div>
+							</li>
+							<li class="nav-item indicator-nav__item">
+								<a class="nav-link indicator-nav__link" href="./blogs.html">Blog</a>
+							</li>
+							<li class="nav-item indicator-nav__item">
+								<a class="nav-link indicator-nav__link" href="./contact.html">Contact</a>
+							</li>
+						</ul>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="banner-footer">
-			<div class="container">
-				<div class="row match-height">
-					<div class="col-xl-3 col-lg-4 col-md-6">
-						<div class="banner-footer__block">
-							<h4 class="banner-footer__block__text">CPF : vous êtes salariés ou demandeur d’emploi</h4>
-							<a href="#!" class="banner-footer__block__btn">
-								<span class="banner-footer__block__btn__text">En savoir plus</span>
-								<i class="bi bi-chevron-right banner-footer__block__btn__icon"></i>
-							</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-4 col-md-6">
-						<div class="banner-footer__block">
-							<h4 class="banner-footer__block__text">Auto-entrepreneurs connaissez-vous vos droits à la formation</h4>
-							<a href="#!" class="banner-footer__block__btn">
-								<span class="banner-footer__block__btn__text">En savoir plus</span>
-								<i class="bi bi-chevron-right banner-footer__block__btn__icon"></i>
-							</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-4 col-md-6">
-						<div class="banner-footer__block">
-							<h4 class="banner-footer__block__text">Entreprises : formez vos salariés gratuitement</h4>
-							<a href="#!" class="banner-footer__block__btn">
-								<span class="banner-footer__block__btn__text">En savoir plus</span>
-								<i class="bi bi-chevron-right banner-footer__block__btn__icon"></i>
-							</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-4 col-md-6">
-						<div class="banner-footer__block">
-							<h4 class="banner-footer__block__text">Nos formations</h4>
-							<a href="#!" class="banner-footer__block__btn">
-								<span class="banner-footer__block__btn__text">En savoir plus</span>
-								<i class="bi bi-chevron-right banner-footer__block__btn__icon"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- MY FORMATION Section -->
-	<section class="section section-gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="section-header">
-						<h1 class="section-header__title">MY FORMATION</h1>
-					</div>
-				</div>
-				<div class="col-lg-6 text-center text-lg-left mb-4 mb-lg-0">
-					<img src="./assets/images/sections/MY-FORMATION.png" alt="section image" class="section__image img-fluid">
-				</div>
-				<div class="col-xl-5 col-lg-6">
-					<ul class="custom-list">
-						<li class="custom-list__item">
-							<i class="custom-list__item__marker"></i>
-							<span class="custom-list__item__text">My Formation France propose un cursus de formation à distance, qui se distingue par sa qualité mais aussi par la qualification de ses formateurs.</span>
-						</li>
-						<li class="custom-list__item">
-							<i class="custom-list__item__marker"></i>
-							<span class="custom-list__item__text">My Formation France vous propose un panel de formation professionnelle éligible au financement par le Compte Personnel de Formation.</span>
-						</li>
-						<li class="custom-list__item">
-							<i class="custom-list__item__marker"></i>
-							<span class="custom-list__item__text">Développez vos compétences en suivant des formations certifiantes liées aux besoins économiques du marché du travail.</span>
-						</li>
-						<li class="custom-list__item">
-							<i class="custom-list__item__marker"></i>
-							<span class="custom-list__item__text">Vous pourrez débuter votre formation professionnelle immédiatement après la validation du plan de formation et le respect du délai légal de 14 jours</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="section section-gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="section-header">
-						<h1 class="section-header__title">INFORMATIONS PRATIQUES</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container-fluid container-xl">
-			<div class="col-12">
-				<div class="info-slider row match-height">
-					<div class="info-slide col-lg-4">
-						<div class="info-slide__card">
-							<h3 class="info-slide__card__title">Méthodes mobilisées:</h3>
-							<ul class="info-slide__card__list mb-0">
-								<li class="info-slide__card__list__item">- Synchrone (par entretien téléphonique)</li>
-								<li class="info-slide__card__list__item">- Asynchrone (par travaux réalisés et échange par mails)</li>
-							</ul>
-						</div>
-					</div>
-					<div class="info-slide col-lg-4">
-						<div class="info-slide__card">
-							<h3 class="info-slide__card__title">L’inscription à la formation devient définitive :</h3>
-							<ul class="info-slide__card__list mb-0">
-								<li class="info-slide__card__list__item">- Pour les contrats de formation: après le respect du délai de rétractation de 14 jours</li>
-								<li class="info-slide__card__list__item">- Lorsque la formation est financée par le CPF: après respect du délai de rétractation de 15 jours</li>
-							</ul>
-						</div>
-					</div>
-					<div class="info-slide col-lg-4">
-						<div class="info-slide__card">
-							<h3 class="info-slide__card__title">L’inscription à la formation devient définitive :</h3>
-							<ul class="info-slide__card__list mb-0">
-								<li class="info-slide__card__list__item">- Pour les contrats de formation: après le respect du délai de rétractation de 14 jours</li>
-								<li class="info-slide__card__list__item">- Lorsque la formation est financée par le CPF: après respect du délai de rétractation de 15 jours</li>
-							</ul>
-						</div>
-					</div>
-					<div class="info-slide col-lg-4">
-						<div class="info-slide__card">
-							<h3 class="info-slide__card__title">L’inscription à la formation devient définitive :</h3>
-							<ul class="info-slide__card__list mb-0">
-								<li class="info-slide__card__list__item">- Pour les contrats de formation: après le respect du délai de rétractation de 14 jours</li>
-								<li class="info-slide__card__list__item">- Lorsque la formation est financée par le CPF: après respect du délai de rétractation de 15 jours</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="figures section-gap">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-12 text-center">
-					<div class="section-header">
-						<h1 class="section-header__title">MY FORMATION FRANCE EN CHIFFRE</h1>
-					</div>
-					<h2 class="figures__title">À la date du 1er Novembre pour l'année 2021</h2>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="figures__card">
-						<img src="./assets/images/icons/badge.png" alt="figures image" class="figures__card__image">
-						<h3 class="figures__card__title">2934</h3>
-						<p class="figures__card__text">Nombre d’inscrits</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="figures__card">
-						<img src="./assets/images/icons/chart.png" alt="figures image" class="figures__card__image">
-						<h3 class="figures__card__title">100%</h3>
-						<p class="figures__card__text">Taux de réussite</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="figures__card">
-						<img src="./assets/images/icons/student.png" alt="figures image" class="figures__card__image">
-						<h3 class="figures__card__title">457</h3>
-						<p class="figures__card__text">Nombre de certifiés</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="section section-gap">
-		<div class="container">
-			<div class="row align-items-center flex-lg-row-reverse">
-				<div class="col-lg-6 text-center text-lg-left">
-					<img src="./assets/images/sections/CPF.png" alt="section image" class="section__image img-fluid">
-				</div>
-				<div class="col-lg-6 pt-5">
-					<h1 class="section__title">QU'EST-CE QU'UN CPF ?</h1>
-					<p class="section__text">Le compte personnel de formation est utilisable par tout salarié, à tout moment de sa vie active, y compris en période de chômage afin de suivre une formation qualifiante ou certifiante, prise en charge par l’état. Le CPF a remplacé le droit individuel à la formation. Les salariés doivent faire la migration au CPF avant le 1er juillet 2021 pour conserver leur crédit au Crédit Individuel à la Formation (DIF).</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="section section-gap" style="background-image: url(./assets/images/shapes/rounded-corder-shape.png);">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-6 text-center text-lg-left">
-					<img src="./assets/images/sections/SAVOIR.png" alt="section image" class="section__image img-fluid">
-				</div>
-				<div class="col-lg-6 pt-5">
-					<h1 class="section__title">QUE DEVRIEZ-VOUS SAVOIR ?</h1>
-					<p class="section__text">Le compte personnel de formation est un moyen pour sécuriser vos cursus de formations professionnels. Détenir un CPF, c’est permettre à son détendeur, quel que soit son statut, salarié ou demandeur d’emploi, de suivre, à son initiative, une action de formation à distance. Le Compte Personnel de Formation est le nouveau droit à la formation professionnelle qui remplace le Compte Individuel de Formation DIF et ce depuis le 1er janvier 2015. Ce compte est accessible à un large public, particulièrement aux salariés et aux demandeurs d’emploi aussi aux auto-entrepreneurs. À partir de 16 ans,15 ans pour les apprentis, et jusqu’ à la retraite, des heures de formation peuvent être cumulées et comptabiliser sur votre Compte de formation. En effet, Chaque année votre compte est alimenté en un nombre d’heure préétabli, dans la limite de 150 heures de formation professionnelle, et ce sur 8 ans, même à la retraite tant que le compte est approvisionné.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="section section-gap">
-		<div class="container">
-			<div class="row align-items-center flex-lg-row-reverse">
-				<div class="col-lg-6 text-center text-lg-left">
-					<img src="./assets/images/sections/FORMATIONS.png" alt="section image" class="section__image img-fluid">
-				</div>
-				<div class="col-lg-6 pt-5">
-					<h1 class="section__title">QUELLES SONT LES FORMATIONS ÉLIGIBLES AU CPF ?</h1>
-					<p class="section__text">Seuls les formations conduisant à une qualification, une certification, l’acquisition d’un socle de connaissances et de compétences par décret ou actions d’accompagnements à la validation des acquis de l’expérience (VAE).</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="certification section section-gap">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-12">
-					<div class="section-header text-center">
-						<h1 class="section-header__title">NOS CERTIFICATIONS</h1>
-					</div>
-				</div>
-				<div class="col-lg-5">
-					<div class="certification__card">
-						<h3 class="certification__card__title">TOIEC</h3>
-						<p class="certification__card__text">The Test of English for International Communication, sert à évaluer le niveau des candidats et à déterminer leur capacité à employer l’anglais pour un usage professionnel. Le TOIEC permet de mesurer leur compréhension et leur expression en anglais.</p>
-						<div class="text-center">
-							<img src="./assets/images/companies/TOEIC.png" alt="certification iamge" class="certification__card__image">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="section section-gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="section-header text-center">
-						<h1 class="section-header__title"><i class="bi bi-chat-dots mr-1"></i>TÉMOIGNAGES</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="section section-gap"></section>
-
-	<!-- Footer Section -->
-	<footer class="footer">
-		<div class="footer__top">
+			</nav>
+		</header>
+	
+		<!-- Banner Section -->
+		<section class="banner" style="background-image: url(./assets/images/banners/home-banner.png);">
 			<div class="container">
 				<div class="row">
-					<div class="col-xl-3">
-						<div class="footer__block">
-							<h3 class="footer__block__title">Contact</h3>
-							<address class="footer__block__address">
-								<h4 class="footer__block__address__admin"><i class="bi bi-person-fill"></i> ARLE Mehdi</h4>
-								<ul class="footer__block__address__list">
-									<li class="footer__block__address__list__item">◉ Référent pédagogique</li>
-									<li class="footer__block__address__list__item">◉ Référent handicap</li>
-									<li class="footer__block__address__list__item">◉ Référent administratif</li>
-								</ul>
-								<a href="mailto:contact@demo.com" class="footer__block__address__link">
-									<span class="footer__block__address__link__icon"><i class="bi bi-envelope"></i></span>contact@myformationfrance.fr
-								</a>
-								<a href="tel:+123456789" class="footer__block__address__link">
-									<span class="footer__block__address__link__icon"><i class="bi bi-telephone-fill"></i></span>+33 1 46 74 59 80
-								</a>
-							</address>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-4 col-sm-6">
-						<div class="footer__block">
-							<h3 class="footer__block__title">Contact</h3>
-							<ul class="footer__block__list">
-								<li class="footer__block__list__item">
-									<a href="#!" class="footer__block__list__item__link">
-										<span class="footer__block__list__item__link__icon">
-											<i class="bi bi-chevron-right"></i>
-										</span>
-										Formations
-									</a>
-								</li>
-								<li class="footer__block__list__item">
-									<a href="#!" class="footer__block__list__item__link">
-										<span class="footer__block__list__item__link__icon">
-											<i class="bi bi-chevron-right"></i>
-										</span>
-										CPF
-									</a>
-								</li>
-								<li class="footer__block__list__item">
-									<a href="#!" class="footer__block__list__item__link">
-										<span class="footer__block__list__item__link__icon">
-											<i class="bi bi-chevron-right"></i>
-										</span>
-										Auto-entrepreneur
-									</a>
-								</li>
-								<li class="footer__block__list__item">
-									<a href="#!" class="footer__block__list__item__link">
-										<span class="footer__block__list__item__link__icon">
-											<i class="bi bi-chevron-right"></i>
-										</span>
-										Entreprises
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-4 col-sm-6">
-						<div class="footer__block">
-							<h3 class="footer__block__title">AIDE</h3>
-							<ul class="footer__block__list">
-								<li class="footer__block__list__item">
-									<a href="#!" class="footer__block__list__item__link">
-										<span class="footer__block__list__item__link__icon">
-											<i class="bi bi-chevron-right"></i>
-										</span>
-										Contact
-									</a>
-								</li>
-								<li class="footer__block__list__item">
-									<a href="#!" class="footer__block__list__item__link">
-										<span class="footer__block__list__item__link__icon">
-											<i class="bi bi-chevron-right"></i>
-										</span>
-										Réclamation
-									</a>
-								</li>
-								<li class="footer__block__list__item">
-									<a href="#!" class="footer__block__list__item__link">
-										<span class="footer__block__list__item__link__icon">
-											<i class="bi bi-chevron-right"></i>
-										</span>
-										Blog
-									</a>
-								</li>
-								<li class="footer__block__list__item">
-									<a href="#!" class="footer__block__list__item__link">
-										<span class="footer__block__list__item__link__icon">
-											<i class="bi bi-chevron-right"></i>
-										</span>
-										CGV
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-4 col-sm-6">
-						<div class="footer__block">
-							<h3 class="footer__block__title">Mentions légales</h3>
-							<ul class="footer__block__list">
-								<li class="footer__block__list__item">
-									<a href="#!" class="footer__block__list__item__link">
-										<span class="footer__block__list__item__link__icon">
-											<i class="bi bi-chevron-right"></i>
-										</span>
-										Cookies
-									</a>
-								</li>
-								<li class="footer__block__list__item">
-									<a href="#!" class="footer__block__list__item__link">
-										<span class="footer__block__list__item__link__icon">
-											<i class="bi bi-chevron-right"></i>
-										</span>
-										FAQ
-									</a>
-								</li>
-								<li class="footer__block__list__item">
-									<a href="#!" class="footer__block__list__item__link">
-										<span class="footer__block__list__item__link__icon">
-											<i class="bi bi-chevron-right"></i>
-										</span>
-										Mentions légales
-									</a>
-								</li>
-								<li class="footer__block__list__item">
-									<a href="#!" class="footer__block__list__item__link">
-										<span class="footer__block__list__item__link__icon">
-											<i class="bi bi-chevron-right"></i>
-										</span>
-										Règlement intérieur
-									</a>
-								</li>
-							</ul>
+					<div class="col-xl-6">
+						<h1 class="banner__title">
+							Profiter de votre droit <br>
+							à la formation <br>
+							et améliorer votre CV
+						</h1>
+						<a href="#!" class="primary-btn">Vérifier mon éligibilité</a>
+						<div>
+							<a href="#!" class="banner__btn">
+								<img src="./assets/images/icons/handicap-sign.png" alt="icon" class="banner__btn__image">
+								Accessibilité des personnes en situation de handicap
+								<svg class="banner__btn__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M13.7403 6.15817L12.8963 5.29116C12.5488 4.9343 11.9832 4.9343 11.6314 5.29116L8.48915 8.52353V0.917305C8.48915 0.411765 8.08606 0 7.59613 0H6.40473C5.91256 0 5.5117 0.407189 5.5117 0.917305V8.51892L2.36949 5.29116C2.02209 4.9343 1.45644 4.9343 1.10458 5.29116L0.260553 6.15817C-0.0868511 6.51503 -0.0868511 7.09608 0.260553 7.45752L6.36685 13.7301C6.54056 13.9085 6.76995 14 6.99707 14C7.22643 14 7.4536 13.9085 7.62731 13.7301L13.7336 7.45752C14.0877 7.09608 14.0877 6.51503 13.7403 6.15817Z" fill="currentColor"/>
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="footer__bottom">
+			<div class="banner-footer">
+				<div class="container">
+					<div class="row match-height">
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="banner-footer__block">
+								<h4 class="banner-footer__block__text">CPF : vous êtes salariés ou demandeur d’emploi</h4>
+								<a href="#!" class="banner-footer__block__btn">
+									<span class="banner-footer__block__btn__text">En savoir plus</span>
+									<i class="bi bi-chevron-right banner-footer__block__btn__icon"></i>
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="banner-footer__block">
+								<h4 class="banner-footer__block__text">Auto-entrepreneurs connaissez-vous vos droits à la formation</h4>
+								<a href="#!" class="banner-footer__block__btn">
+									<span class="banner-footer__block__btn__text">En savoir plus</span>
+									<i class="bi bi-chevron-right banner-footer__block__btn__icon"></i>
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="banner-footer__block">
+								<h4 class="banner-footer__block__text">Entreprises : formez vos salariés gratuitement</h4>
+								<a href="#!" class="banner-footer__block__btn">
+									<span class="banner-footer__block__btn__text">En savoir plus</span>
+									<i class="bi bi-chevron-right banner-footer__block__btn__icon"></i>
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="banner-footer__block">
+								<h4 class="banner-footer__block__text">Nos formations</h4>
+								<a href="#!" class="banner-footer__block__btn">
+									<span class="banner-footer__block__btn__text">En savoir plus</span>
+									<i class="bi bi-chevron-right banner-footer__block__btn__icon"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<!-- MY FORMATION Section -->
+		<section class="section section-gap">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<p class="footer__copyright">Tous les droits sont réservés 2022 <a href="./" class="footer__copyright__link">Our formation</a> france</p>
+						<div class="section-header">
+							<h1 class="section-header__title">MY FORMATION</h1>
+						</div>
+					</div>
+					<div class="col-lg-6 text-center text-lg-left mb-4 mb-lg-0">
+						<img src="./assets/images/sections/MY-FORMATION.png" alt="section image" class="section__image img-fluid">
+					</div>
+					<div class="col-xl-5 col-lg-6">
+						<ul class="custom-list">
+							<li class="custom-list__item">
+								<i class="custom-list__item__marker"></i>
+								<span class="custom-list__item__text">My Formation France propose un cursus de formation à distance, qui se distingue par sa qualité mais aussi par la qualification de ses formateurs.</span>
+							</li>
+							<li class="custom-list__item">
+								<i class="custom-list__item__marker"></i>
+								<span class="custom-list__item__text">My Formation France vous propose un panel de formation professionnelle éligible au financement par le Compte Personnel de Formation.</span>
+							</li>
+							<li class="custom-list__item">
+								<i class="custom-list__item__marker"></i>
+								<span class="custom-list__item__text">Développez vos compétences en suivant des formations certifiantes liées aux besoins économiques du marché du travail.</span>
+							</li>
+							<li class="custom-list__item">
+								<i class="custom-list__item__marker"></i>
+								<span class="custom-list__item__text">Vous pourrez débuter votre formation professionnelle immédiatement après la validation du plan de formation et le respect du délai légal de 14 jours</span>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
+		</section>
+	
+		<section class="section section-gap">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="section-header">
+							<h1 class="section-header__title">INFORMATIONS PRATIQUES</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid container-xl">
+				<div class="col-12">
+					<div class="info-slider row match-height">
+						<div class="info-slide col-lg-4">
+							<div class="info-slide__card">
+								<h3 class="info-slide__card__title">Méthodes mobilisées:</h3>
+								<ul class="info-slide__card__list mb-0">
+									<li class="info-slide__card__list__item">- Synchrone (par entretien téléphonique)</li>
+									<li class="info-slide__card__list__item">- Asynchrone (par travaux réalisés et échange par mails)</li>
+								</ul>
+							</div>
+						</div>
+						<div class="info-slide col-lg-4">
+							<div class="info-slide__card">
+								<h3 class="info-slide__card__title">L’inscription à la formation devient définitive :</h3>
+								<ul class="info-slide__card__list mb-0">
+									<li class="info-slide__card__list__item">- Pour les contrats de formation: après le respect du délai de rétractation de 14 jours</li>
+									<li class="info-slide__card__list__item">- Lorsque la formation est financée par le CPF: après respect du délai de rétractation de 15 jours</li>
+								</ul>
+							</div>
+						</div>
+						<div class="info-slide col-lg-4">
+							<div class="info-slide__card">
+								<h3 class="info-slide__card__title">L’inscription à la formation devient définitive :</h3>
+								<ul class="info-slide__card__list mb-0">
+									<li class="info-slide__card__list__item">- Pour les contrats de formation: après le respect du délai de rétractation de 14 jours</li>
+									<li class="info-slide__card__list__item">- Lorsque la formation est financée par le CPF: après respect du délai de rétractation de 15 jours</li>
+								</ul>
+							</div>
+						</div>
+						<div class="info-slide col-lg-4">
+							<div class="info-slide__card">
+								<h3 class="info-slide__card__title">L’inscription à la formation devient définitive :</h3>
+								<ul class="info-slide__card__list mb-0">
+									<li class="info-slide__card__list__item">- Pour les contrats de formation: après le respect du délai de rétractation de 14 jours</li>
+									<li class="info-slide__card__list__item">- Lorsque la formation est financée par le CPF: après respect du délai de rétractation de 15 jours</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="figures section-gap">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 text-center">
+						<div class="section-header">
+							<h1 class="section-header__title">MY FORMATION FRANCE EN CHIFFRE</h1>
+						</div>
+						<h2 class="figures__title">À la date du 1er Novembre pour l'année 2021</h2>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="figures__card">
+							<img src="./assets/images/icons/badge.png" alt="figures image" class="figures__card__image">
+							<h3 class="figures__card__title">2934</h3>
+							<p class="figures__card__text">Nombre d’inscrits</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="figures__card">
+							<img src="./assets/images/icons/chart.png" alt="figures image" class="figures__card__image">
+							<h3 class="figures__card__title">100%</h3>
+							<p class="figures__card__text">Taux de réussite</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="figures__card">
+							<img src="./assets/images/icons/student.png" alt="figures image" class="figures__card__image">
+							<h3 class="figures__card__title">457</h3>
+							<p class="figures__card__text">Nombre de certifiés</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="section section-gap">
+			<div class="container">
+				<div class="row align-items-center flex-lg-row-reverse">
+					<div class="col-lg-6 text-center text-lg-left">
+						<img src="./assets/images/sections/CPF.png" alt="section image" class="section__image img-fluid">
+					</div>
+					<div class="col-lg-6 pt-5">
+						<h1 class="section__title">QU'EST-CE QU'UN CPF ?</h1>
+						<p class="section__text">Le compte personnel de formation est utilisable par tout salarié, à tout moment de sa vie active, y compris en période de chômage afin de suivre une formation qualifiante ou certifiante, prise en charge par l’état. Le CPF a remplacé le droit individuel à la formation. Les salariés doivent faire la migration au CPF avant le 1er juillet 2021 pour conserver leur crédit au Crédit Individuel à la Formation (DIF).</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="section section-gap" style="background-image: url(./assets/images/shapes/rounded-corder-shape.png);">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6 text-center text-lg-left">
+						<img src="./assets/images/sections/SAVOIR.png" alt="section image" class="section__image img-fluid">
+					</div>
+					<div class="col-lg-6 pt-5">
+						<h1 class="section__title">QUE DEVRIEZ-VOUS SAVOIR ?</h1>
+						<p class="section__text">Le compte personnel de formation est un moyen pour sécuriser vos cursus de formations professionnels. Détenir un CPF, c’est permettre à son détendeur, quel que soit son statut, salarié ou demandeur d’emploi, de suivre, à son initiative, une action de formation à distance. Le Compte Personnel de Formation est le nouveau droit à la formation professionnelle qui remplace le Compte Individuel de Formation DIF et ce depuis le 1er janvier 2015. Ce compte est accessible à un large public, particulièrement aux salariés et aux demandeurs d’emploi aussi aux auto-entrepreneurs. À partir de 16 ans,15 ans pour les apprentis, et jusqu’ à la retraite, des heures de formation peuvent être cumulées et comptabiliser sur votre Compte de formation. En effet, Chaque année votre compte est alimenté en un nombre d’heure préétabli, dans la limite de 150 heures de formation professionnelle, et ce sur 8 ans, même à la retraite tant que le compte est approvisionné.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="section section-gap">
+			<div class="container">
+				<div class="row align-items-center flex-lg-row-reverse">
+					<div class="col-lg-6 text-center text-lg-left">
+						<img src="./assets/images/sections/FORMATIONS.png" alt="section image" class="section__image img-fluid">
+					</div>
+					<div class="col-lg-6 pt-5">
+						<h1 class="section__title">QUELLES SONT LES FORMATIONS ÉLIGIBLES AU CPF ?</h1>
+						<p class="section__text">Seuls les formations conduisant à une qualification, une certification, l’acquisition d’un socle de connaissances et de compétences par décret ou actions d’accompagnements à la validation des acquis de l’expérience (VAE).</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="certification section section-gap">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<div class="section-header text-center">
+							<h1 class="section-header__title">NOS CERTIFICATIONS</h1>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<div class="certification__card">
+							<h3 class="certification__card__title">TOIEC</h3>
+							<p class="certification__card__text">The Test of English for International Communication, sert à évaluer le niveau des candidats et à déterminer leur capacité à employer l’anglais pour un usage professionnel. Le TOIEC permet de mesurer leur compréhension et leur expression en anglais.</p>
+							<div class="text-center">
+								<img src="./assets/images/companies/TOEIC.png" alt="certification iamge" class="certification__card__image">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="section section-gap">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="section-header text-center">
+							<h1 class="section-header__title"><i class="bi bi-chat-dots mr-1"></i>TÉMOIGNAGES</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="section section-gap"></section>
+	
+		<!-- Footer Section -->
+		<footer class="footer">
+			<div class="footer__top">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-3">
+							<div class="footer__block">
+								<h3 class="footer__block__title">Contact</h3>
+								<address class="footer__block__address">
+									<h4 class="footer__block__address__admin"><i class="bi bi-person-fill"></i> ARLE Mehdi</h4>
+									<ul class="footer__block__address__list">
+										<li class="footer__block__address__list__item">◉ Référent pédagogique</li>
+										<li class="footer__block__address__list__item">◉ Référent handicap</li>
+										<li class="footer__block__address__list__item">◉ Référent administratif</li>
+									</ul>
+									<a href="mailto:contact@demo.com" class="footer__block__address__link">
+										<span class="footer__block__address__link__icon"><i class="bi bi-envelope"></i></span>contact@myformationfrance.fr
+									</a>
+									<a href="tel:+123456789" class="footer__block__address__link">
+										<span class="footer__block__address__link__icon"><i class="bi bi-telephone-fill"></i></span>+33 1 46 74 59 80
+									</a>
+								</address>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-sm-6">
+							<div class="footer__block">
+								<h3 class="footer__block__title">Contact</h3>
+								<ul class="footer__block__list">
+									<li class="footer__block__list__item">
+										<a href="#!" class="footer__block__list__item__link">
+											<span class="footer__block__list__item__link__icon">
+												<i class="bi bi-chevron-right"></i>
+											</span>
+											Formations
+										</a>
+									</li>
+									<li class="footer__block__list__item">
+										<a href="#!" class="footer__block__list__item__link">
+											<span class="footer__block__list__item__link__icon">
+												<i class="bi bi-chevron-right"></i>
+											</span>
+											CPF
+										</a>
+									</li>
+									<li class="footer__block__list__item">
+										<a href="#!" class="footer__block__list__item__link">
+											<span class="footer__block__list__item__link__icon">
+												<i class="bi bi-chevron-right"></i>
+											</span>
+											Auto-entrepreneur
+										</a>
+									</li>
+									<li class="footer__block__list__item">
+										<a href="#!" class="footer__block__list__item__link">
+											<span class="footer__block__list__item__link__icon">
+												<i class="bi bi-chevron-right"></i>
+											</span>
+											Entreprises
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-sm-6">
+							<div class="footer__block">
+								<h3 class="footer__block__title">AIDE</h3>
+								<ul class="footer__block__list">
+									<li class="footer__block__list__item">
+										<a href="#!" class="footer__block__list__item__link">
+											<span class="footer__block__list__item__link__icon">
+												<i class="bi bi-chevron-right"></i>
+											</span>
+											Contact
+										</a>
+									</li>
+									<li class="footer__block__list__item">
+										<a href="#!" class="footer__block__list__item__link">
+											<span class="footer__block__list__item__link__icon">
+												<i class="bi bi-chevron-right"></i>
+											</span>
+											Réclamation
+										</a>
+									</li>
+									<li class="footer__block__list__item">
+										<a href="#!" class="footer__block__list__item__link">
+											<span class="footer__block__list__item__link__icon">
+												<i class="bi bi-chevron-right"></i>
+											</span>
+											Blog
+										</a>
+									</li>
+									<li class="footer__block__list__item">
+										<a href="#!" class="footer__block__list__item__link">
+											<span class="footer__block__list__item__link__icon">
+												<i class="bi bi-chevron-right"></i>
+											</span>
+											CGV
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-sm-6">
+							<div class="footer__block">
+								<h3 class="footer__block__title">Mentions légales</h3>
+								<ul class="footer__block__list">
+									<li class="footer__block__list__item">
+										<a href="#!" class="footer__block__list__item__link">
+											<span class="footer__block__list__item__link__icon">
+												<i class="bi bi-chevron-right"></i>
+											</span>
+											Cookies
+										</a>
+									</li>
+									<li class="footer__block__list__item">
+										<a href="#!" class="footer__block__list__item__link">
+											<span class="footer__block__list__item__link__icon">
+												<i class="bi bi-chevron-right"></i>
+											</span>
+											FAQ
+										</a>
+									</li>
+									<li class="footer__block__list__item">
+										<a href="#!" class="footer__block__list__item__link">
+											<span class="footer__block__list__item__link__icon">
+												<i class="bi bi-chevron-right"></i>
+											</span>
+											Mentions légales
+										</a>
+									</li>
+									<li class="footer__block__list__item">
+										<a href="#!" class="footer__block__list__item__link">
+											<span class="footer__block__list__item__link__icon">
+												<i class="bi bi-chevron-right"></i>
+											</span>
+											Règlement intérieur
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<p class="footer__copyright">Tous les droits sont réservés 2022 <a href="./" class="footer__copyright__link">Our formation</a> france</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
+		<!-- Scroll To Top Button -->
+		<div class="scroll-top position-fixed">
+			<button type="button" class="scroll-top__btn border-0 d-inline-flex align-items-center justify-content-center">
+				<i class="bi bi-chevron-up"></i>
+			</button>
 		</div>
-	</footer>
+	</main>
 
-	<!-- Scroll To Top Button -->
-	<div class="scroll-top position-fixed">
-		<button type="button" class="scroll-top__btn border-0 d-inline-flex align-items-center justify-content-center">
-			<i class="bi bi-chevron-up"></i>
-		</button>
+	<!-- Mobile Menu -->
+	<button type="button" class="offcanvas mobile-menu--close"></button>
+	<div class="mobile-menu">
+		<div class="mobile-menu__layer mobile-menu__layer--main">
+			<div class="mobile-menu__header">
+				<button type="button" class="mobile-menu__btn mobile-menu--close">
+					<i class="bi bi-x-lg"></i>
+				</button>
+			</div>
+			<nav class="mobile-menu__body">
+				<ul class="mobile-menu__nav">
+					<li class="mobile-menu__nav__item">
+						<a class="mobile-menu__nav__link active" href="./index.html">Accueil</a>
+					</li>
+					<li class="mobile-menu__nav__item">
+						<a class="mobile-menu__nav__link" href="./formations.html">Formations</a>
+					</li>
+					<li class="mobile-menu__nav__item">
+						<a class="mobile-menu__nav__link" href="./cpf.html">CPF</a>
+					</li>
+					<li class="mobile-menu__nav__item">
+						<button type="button" class="mobile-menu__nav__link mobile-menu__nav__link--has-submenu" data-toggle="sub-menu" data-target="sub-menu--1">
+							Vous êtes
+						</button>
+					</li>
+					<li class="mobile-menu__nav__item">
+						<a class="mobile-menu__nav__link" href="./blogs.html">Blog</a>
+					</li>
+					<li class="mobile-menu__nav__item">
+						<a class="mobile-menu__nav__link" href="./contact.html">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="mobile-menu__layer mobile-menu__layer--sub" data-src="sub-menu--1">
+			<div class="mobile-menu__header">
+				<button type="button" class="mobile-menu__btn mobile-menu__layer--close">
+					<i class="bi bi-chevron-left"></i>
+				</button>
+			</div>
+			<nav class="mobile-menu__body">
+				<ul class="mobile-menu__nav">
+					<li class="mobile-menu__nav__item">
+						<a class="mobile-menu__nav__link" href="#!">Entreprises</a>
+					</li>
+					<li class="mobile-menu__nav__item">
+						<a class="mobile-menu__nav__link" href="#!">Indépendants</a>
+					</li>
+					<li class="mobile-menu__nav__item">
+						<a class="mobile-menu__nav__link" href="#!">Auto-entrepreneur</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</div>
 
 	<!-- All Scripts -->

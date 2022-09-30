@@ -47,25 +47,6 @@
     	$('.header-height-fix').css('height', $('.header').innerHeight() - 2 +'px');
 	};
 
-	/* Closes responsive menu when a navbar link is clicked */
-	$(".nav-link, .dropdown-item").on("click", function (e) {
-		if( $(this).hasClass("dropdown-toggle") ){
-			e.preventDefault();
-		}else{
-			$(".navbar-collapse").collapse("hide");
-			$("html").removeClass("overflow-hidden");
-			$('.offCanvasMenuCloser').removeClass('show');
-		}
-	});
-	$('.navbar-toggler').on('click', function () {
-        $("html").toggleClass('overflow-hidden');
-        $('.offCanvasMenuCloser').toggleClass('show');
-    });
-    $('.offCanvasMenuCloser').on('click', function () {
-        $(this).removeClass('show');
-        $("html").removeClass("overflow-hidden");
-    });
-
 	/* Navbar item indicator function */
 	$('.indicator-nav .indicator-nav__link, .indicator-nav .dropdown .dropdown-menu').on('mouseenter focusin', function(){
 		$(this).closest(".indicator-nav").find(".indicator-nav__line").css({
@@ -147,6 +128,34 @@
 		}
 	}
 
+	/* Mobile Menu Function */
+	$('[data-toggle="sub-menu"]').on("click", function(){
+		let currentTarget = $(this).data("target");
+		let currentSrc = $("[data-src='"+ currentTarget +"']");
+		currentSrc.addClass("show");
+		$(this).closest(".mobile-menu__layer").addClass("hide");
+	});
+
+	$(".mobile-menu__layer--close").on("click", function(){
+		$(this).closest(".mobile-menu__layer").removeClass("show");
+		$(this).closest(".mobile-menu").find(".mobile-menu__layer.hide").removeClass("hide");
+	});
+
+	$(".mobile-menu--open").on("click", function(){
+		$(".mobile-menu").addClass("mobile-menu--show");
+		$(".page-wrapper").addClass("page-wrapper--hide");
+		$(".offcanvas").addClass("offcanvas--show");
+		$(".navbar-toggler").addClass("expanded");
+		$("body").addClass("scroll-off");
+	});
+
+	$(".mobile-menu--close").on("click", function(){
+		$(".mobile-menu").removeClass("mobile-menu--show");
+		$(".page-wrapper").removeClass("page-wrapper--hide");
+		$(".offcanvas").removeClass("offcanvas--show");
+		$(".navbar-toggler").removeClass("expanded");
+		$("body").removeClass("scroll-off");
+	});
 
     /*  Banner slider */
     // $(".banner__slider").slick({
