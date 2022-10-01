@@ -268,6 +268,19 @@ img {
   }
 }
 
+.social-icon-list .list-inline-item {
+  margin: 0.5rem;
+  line-height: 1;
+}
+
+.social-icon-list__link {
+  font-size: 1.875rem;
+}
+
+.social-icon-list__link:hover, .social-icon-list__link:focus-visible {
+  color: var(--color-primary);
+}
+
 /* Custom Container Style */
 @media (min-width: 1400px) {
   .container {
@@ -381,6 +394,10 @@ img {
      -moz-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.button-group-spacing > * {
+  margin: 3px;
 }
 
 @media (max-width: 991.98px) {
@@ -945,8 +962,167 @@ img {
   }
 }
 
+.contact__sub-title {
+  color: #383838;
+  font-weight: 600;
+  line-height: 1.8;
+  margin-bottom: 3.125rem;
+}
+
+.contact__title {
+  color: #383838;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.contact__text {
+  color: #455a64;
+  margin-bottom: 3.125rem;
+}
+
+.contact__card {
+  color: #ffffff;
+  background-color: var(--color-secondary);
+  padding: 2.5rem;
+  border-radius: 0.625rem;
+}
+
+.follow .section__title {
+  margin-bottom: 1.25rem;
+}
+
+.single-block__header {
+  margin-bottom: 2.5rem;
+}
+
+.single-block__header__image {
+  width: 100%;
+  max-height: 23.75rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.single-block__body {
+  margin-bottom: 5rem;
+}
+
+.single-block__body__title {
+  color: #383838;
+  font-size: 1.625rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .single-block__body__title {
+    font-size: 1.9375rem;
+  }
+}
+
+.single-block__body__meta {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.single-block__body__meta__item {
+  color: var(--color-secondary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.single-block__body__meta__item__text {
+  margin-left: 0.5rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.single-block__body__meta__item__link {
+  color: currentColor;
+}
+
+.single-block__body__meta__item__link:hover, .single-block__body__meta__item__link:focus-visible {
+  color: var(--color-primary);
+}
+
+.single-block__body__content {
+  color: #5e5e5e;
+  margin-top: 1.875rem;
+}
+
+.single-block__body__content * {
+  color: currentColor;
+  line-height: 1.7;
+}
+
+.single-block__body__content h1,
+.single-block__body__content h2,
+.single-block__body__content h3,
+.single-block__body__content h4,
+.single-block__body__content h5,
+.single-block__body__content h6 {
+  color: #383838;
+  line-height: 1.2;
+  margin-top: 0.9375rem;
+}
+
+.single-block__body__content img {
+  max-width: 100% !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.single-block .social-icon-list {
+  text-align: center;
+}
+
+.single-block .social-icon-list__link {
+  font-size: 1.0625rem;
+}
+
+.widget {
+  margin-bottom: 2.5rem;
+}
+
+.widget__title {
+  color: #383838;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.125rem;
+}
+
+.widget__list__item__link {
+  color: #454545;
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+  padding-left: 1.25rem;
+  border-bottom: 1px solid #dedede;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' fill='%23444' class='bi bi-chevron-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 0.75rem;
+  background-position: left 1.25rem;
+}
+
+.widget__list__item__link:hover, .widget__list__item__link:focus-visible {
+  color: var(--color-primary);
+}
+
 /* Common Transition Style */
-.slick__arrows, .slick-dots li button, .training__card__title__link, .blog-card__header__link::after, .blog-card__header__link__image, .blog-card__body__title__link, .blog-card__body__meta, .primary-btn,
+.social-icon-list__link, .slick__arrows, .slick-dots li button, .training__card__title__link, .blog-card__header__link::after, .blog-card__header__link__image, .blog-card__body__title__link, .blog-card__body__meta, .single-block__body__meta__item__link, .widget__list__item__link, .primary-btn,
 .secondary-btn, .scroll-top__btn, .header .navbar-toggler, .header .navbar-toggler__line, .header .navbar .nav-item .dropdown-menu, .header .navbar .nav-item .dropdown-item, .header .navbar .nav-link, .mobile-menu__btn, .mobile-menu__nav__link, .banner-footer__block__btn, .banner-footer__block__btn__icon, .footer__block__address__link, .footer__block__list__item__link, .footer__copyright__link {
   -webkit-transition: all ease .3s;
   -o-transition: all ease .3s;
@@ -1047,6 +1223,67 @@ img {
     color: #ffffff;
     background-color: var(--color-secondary);
   }
+}
+
+.form-control {
+  color: #5e5e5e;
+  font-size: 0.875rem;
+  min-height: 3.1875rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #c4c4c4;
+}
+
+.form-control:-moz-placeholder {
+  color: #c4c4c4;
+}
+
+.form-control::-moz-placeholder {
+  color: #c4c4c4;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.form-control::placeholder {
+  color: #c4c4c4;
+}
+
+.input-group .form-control {
+  border-color: #dedede;
+  border-right: 0;
+}
+
+.input-group-append {
+  border: 1px solid #dedede;
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  -webkit-transition: border-color .15s ease-in-out;
+  -o-transition: border-color .15s ease-in-out;
+  -moz-transition: border-color .15s ease-in-out;
+  transition: border-color .15s ease-in-out;
+}
+
+.input-group-append .btn {
+  border: 0;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.input-group:focus-within .form-control,
+.input-group:focus-within .input-group-append {
+  border-color: var(--color-secondary);
 }
 
 /* Header Section Style */
