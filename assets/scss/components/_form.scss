@@ -7,27 +7,41 @@
         padding-right: toRem(20);
         box-shadow: none !important;
         text-shadow: none !important;
+        border-color: lighten($color-gray, $amount: 40);
 
         &::placeholder{
             color: lighten($color-gray, $amount: 40);
+        }
+
+        &:focus-within
+        {
+            border-color: $color-secondary;
         }
     }
 }
 
 .input-group{
     .form-control{
-        border-color: lighten($color-gray, $amount: 50);
         border-right: 0;
     }
     &-append{
-        border: 1px solid lighten($color-gray, $amount: 50);
+        border: 1px solid lighten($color-gray, $amount: 40);
         border-top-right-radius: .25rem;
         border-bottom-right-radius: .25rem;
         transition: border-color .15s ease-in-out;
 
         .btn{
+            color: $color-gray--dark;
+            font-size: toRem(15);
             border: 0;
             box-shadow: none !important;
+            @extend %transition;
+
+            &:hover,
+            &:focus-within
+            {
+                color: $color-primary;
+            }
         }
     }
 

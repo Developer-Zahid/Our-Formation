@@ -902,6 +902,11 @@ img{
 		margin-bottom: toRem(18);
 	}
 
+	&__text{
+		color: $color-gray;
+		font-size: toRem(15);
+	}
+
 	&__list{
 		&__item{
 			&__link{
@@ -923,6 +928,58 @@ img{
 				&:focus-visible
 				{
 					color: $color-primary;
+				}
+			}
+		}
+	}
+}
+
+.widget-block{
+	margin-bottom: toRem(20);
+
+	&__link{
+		display: block;
+	}
+
+	&__image{
+		width: 100%;
+	}
+
+	&__title{
+		margin-bottom: toRem(12);
+		&__link{
+			color: $color-gray--dark;
+			display: block;
+			font-size: toRem(16);
+			font-weight: 600;
+			@extend %transition;
+	
+			&:hover,
+			&:focus
+			{
+				color: $color-primary;
+			}
+		}
+	}
+
+	&__meta{
+		display: flex;
+		gap: toRem(15);
+
+		&__item{
+			color: lighten($color-gray, $amount: 20);
+			font-size: toRem(12);
+			font-weight: 600;
+			text-transform: uppercase;
+
+			&__link{
+				color: currentColor;
+				@extend %transition;
+
+				&:hover,
+				&:focus
+				{
+					color: $color-secondary;
 				}
 			}
 		}
